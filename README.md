@@ -1,6 +1,9 @@
 # blendle/ruby [![Build Status](http://drone.blendle.io/api/badge/github.com/blendle/docker-ruby/status.svg?branch=master)](http://drone.blendle.io/github.com/blendle/docker-ruby)
 
-Ruby image, based off of [blendle/base][]. The image is `105.3` MB in size.
+This image contains a pre-installed version of Ruby. It is based off of the
+[blendle/base][] image, making it as small as possible (`105.3` MB to be exact).
+
+Use this image as a base image for Ruby-based projects.
 
 [blendle/base]: https://github.com/blendle/docker-base
 
