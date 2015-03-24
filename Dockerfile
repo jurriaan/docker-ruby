@@ -35,6 +35,6 @@ RUN gem install bundler                           \
     && bundle config --global path "$GEM_HOME"    \
     && bundle config --global bin "$GEM_HOME/bin" \
     && bundle config --global frozen 1            \
-    && bundle config --global retry 3             \
+    && bundle config --global retry 3
 
 ENV BUNDLE_APP_CONFIG $GEM_HOME
