@@ -24,6 +24,8 @@ RUN bnl-apk-install-download-deps                                               
     && apk del download-deps build-deps ruby-deps                                               \
     && rm -r /usr/local/src/ruby-${RUBY_VERSION}*
 
+RUN apk-install socat=1.7.3.0-r0
+
 RUN mkdir -p /opt/rubies/ruby-${RUBY_VERSION}/etc \
     && echo 'gem: --no-document' > /opt/rubies/ruby-${RUBY_VERSION}/etc/gemrc
 
