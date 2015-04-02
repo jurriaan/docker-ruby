@@ -15,6 +15,10 @@ describe RSpec.configuration.docker_image_name do
     its(:exit_status) { is_expected.to eq 0 }
   end
 
+  describe command('command -v socat') do
+    its(:exit_status) { is_expected.to eq 0 }
+  end
+
   describe command('command -v ruby-install') do
     its(:exit_status) { is_expected.to eq 0 }
   end
