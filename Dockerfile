@@ -19,10 +19,12 @@ RUN bnl-apk-install-download-deps                                               
     && cd ..                                                                                    \
     && rm -r /home/ruby-install-0.5.0/                                                          \
     && apk-install -t ruby-deps libc-dev=0.6-r0 readline-dev=6.3-r3 libffi-dev=3.0.13-r0        \
-       "openssl-dev>1.0.1" gdbm-dev=1.11-r0 zlib-dev=1.2.8-r1 bash=4.3.30-r0                    \
+       "openssl-dev>1.0.1" gdbm-dev=1.11-r0 zlib-dev=1.2.8-r1 bash=4.3.30-r0 socat              \
     && ruby-install ruby $RUBY_VERSION -- --disable-install-rdoc                                \
     && apk del download-deps build-deps ruby-deps                                               \
     && rm -r /usr/local/src/ruby-${RUBY_VERSION}*
+
+RUN apk-install socat=1.7.3.0-r0
 
 RUN mkdir -p /opt/rubies/ruby-${RUBY_VERSION}/etc \
     && echo 'gem: --no-document' > /opt/rubies/ruby-${RUBY_VERSION}/etc/gemrc

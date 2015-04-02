@@ -33,8 +33,8 @@ ENV PATH /opt/rubies/ruby-${RUBY_VERSION}/bin:$PATH
 ```
 
 ```
-$ docker build -t JeanMertz/ruby:2.1.5 .
-$ docker run -it --rm JeanMertz/ruby:2.1.5 ruby -v
+$ docker build -t blendle/ruby:2.1.5 .
+$ docker run -it --rm blendle/ruby:2.1.5 ruby -v
 => ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux]
 ```
 
